@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Rizvan Sheikh</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <!-- {{ url_for('static', filename='assets/img/apple-touch-icon.png')}} -->
+    <link href="{{ url_for('static', filename='assets/img/favicon.png')}}" rel="icon">
+    <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header-tops">
+        <div class="container">
+            <!-- <a href="/index" class="mr-auto"><img style="width:80px;height:35px" src="{{ url_for('static', filename='assets/img/logo.png')}}" alt="" class="img-fluid"></a> -->
+            <h1><a href="/index">Rizvan Sheikh</a></h1>
+            
+            <h2>I am a  <span class="txt-rotate" data-period="2000" data-rotate='["AS400/RPG Developer.", "Web Developer.", "Web Designer." ]'></span></h2>
+
+            <!-- .nav-menu -->
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                  <!--  <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links">
+                <a href="{{params[' tw_url ']}}" class="twitter" target="_blank"><i class="icofont-twitter"></i></a>
+                <a href="{{params[' fb_url ']}}" class="facebook" target="_blank"><i class="icofont-facebook"></i></a>
+                <a href="{{params[' instagram_url ']}}" class="instagram" target="_blank"><i class="icofont-instagram"></i></a>
+                <a href="{{params[' skype ']}}" class="google-plus" target="_blank"><i class="icofont-skype"></i></a>
+                <a href="{{params[' linkedin_url ']}}" class="linkedin" target="_blank"><i class="icofont-linkedin"></i></a>
+            </div>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+        <!-- ======= About Me ======= -->
+        <div class="about-me container">
+
+            <div class="section-title">
+                <h2>About</h2>
+                <p>Learn more about me</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <img src="{{ url_for('static', filename='assets/img/me.jpg')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+                    <h3>{{params["about_title"]}}</h3>
+                    <p class="font-italic">
+                        {{params["about_text"]}}
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> {{params["birthday"]}}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> {{params["website"]}}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> {{params["phone"]}}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> {{params["city"]}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> {{params["age"]}}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> {{params["degree"]}}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> {{params["email"]}}</li>
+                                <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> {{params["freelance"]}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>
+                        {{params["about_descriptive_text"]}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- End About Me -->
+
+        <!-- ======= Counts ======= -->
+        <div class="counts container">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="count-box">
+                        <i class="icofont-simple-smile"></i>
+                        <span data-toggle="counter-up">{{params["happy_clients"]}}</span>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                    <div class="count-box">
+                        <i class="icofont-document-folder"></i>
+                        <span data-toggle="counter-up">{{params["total_projects"]}}</span>
+                        <p>Total Projects</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="icofont-live-support"></i>
+                        <span data-toggle="counter-up">{{params["support"]}}</span>
+                        <p>Hours Of Support</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="icofont-users-alt-5"></i>
+                        <span data-toggle="counter-up">{{params["workers"]}}</span>
+                        <p>Hard Workers</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End Counts -->
+
+        <!-- ======= Skills  ======= -->
+        <div class="skills container">
+
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+
+            <div class="row skills-content">
+
+                <div class="col-lg-6">
+
+                    <div class="progress">
+                        <span class="skill">RPGLE &amp; CLLE <i class="val">{{params["sql/rpgle"]}}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">HTML <i class="val">{{params["html"]}}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">CSS <i class="val">{{params["css"]}}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="progress">
+                        <span class="skill">JavaScript <i class="val">{{params["javascript"]}}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">Python, Django &amp; Flask<i class="val">{{params["flaskndjango"]}}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">Php<i class="val">{{params["php"]}}%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End Skills -->
+
+        <!-- ======= Interests ======= -->
+        <div class="interests container">
+
+            <div class="section-title">
+                <h2>Interests</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                        <i class="ri-store-line" style="color: #ffbb2c;"></i>
+                        <h3>Programming</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+                        <h3>Cyber Security</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+                        <h3>Books</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
+                        <h3>Magni Dolores</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-database-2-line" style="color: #47aeff;"></i>
+                        <h3>Nemo Enim</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+                        <h3>Eiusmod Tempor</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+                        <h3>Midela Teren</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
+                        <h3>Pira Neve</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-anchor-line" style="color: #b2904f;"></i>
+                        <h3>Dirada Pack</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-disc-line" style="color: #b20969;"></i>
+                        <h3>Moton Ideal</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-base-station-line" style="color: #ff5828;"></i>
+                        <h3>Verdo Park</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                        <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
+                        <h3>Flavor Nivelanda</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Interests -->
+
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resume</h2>
+                <p>Check My Resume</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="resume-title">Sumary</h3>
+                    <div class="resume-item pb-0">
+                        <h4>Rizvan Sheikh</h4>
+                        <p><em>{{ params["resume_txt1"]}}</em></p>
+                        <p>
+                            <ul>
+                                <li>{{params["city"]}}</li>
+                                <li>{{params["phone"]}}</li>
+                                <li>{{params["email"]}}</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <h3 class="resume-title">Education</h3>
+                    <div class="resume-item">
+                        <h4>Bachelor of Engineering in Computer Science</h4>
+                        <h5>2010 - 2014</h5>
+                        <p><em>G.H. Raisoni Collage, Amravati, MH, India</em></p>
+                      <!--  <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Deploma in Computer Science &amp; Engineering</h4>
+                        <h5>2007 - 2010</h5>
+                        <p><em>P.R.M.I.T. Collage, Amravati, MH, India</em></p>
+                        <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="resume-title">Professional Experience</h3>
+                    <div class="resume-item">
+                        <h4>Senior As400 Developer</h4>
+                        <h5>2018 - Present</h5>
+                        <p><em>UST Global International Pvt. Ltd., India </em></p>
+                        <p>
+                            <ul>
+                                <li>Created web services in IBM Web server (IWS).</li>
+                                <li>Actively involved in testing of web services (Post & Get) by using POSTMAN.</li>
+                                <li>Creating programs to generate reports which will sends it directly on emails.</li>
+                                <li>Reverse engineer the old portal to Analyzing Functional requirements of business.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Senior Software Developer</h4>
+                        <h5>2017 - 2018</h5>
+                        <p><em>Mindtree, India</em></p>
+                        <p>
+                            <ul>
+                                <li>Debugging & troubleshooting interactive and batch jobs in AS/400.</li>
+                                <li>Proactively fixing production issues.</li>
+                                <li>Training / guiding / mentoring L2 application team.</li>
+                                <li>Coding RPGLE, CLLE programs as per requirement and Unit testing.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: #29cc61;">
+            <div class="text-center">
+                <a href="{{url_for('download')}}" target="_blank"><button id="btn" type="submit">Download Resume</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- End Resume Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Contact Me</p>
+            </div>
+
+            <div class="row mt-2">
+
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="info-box">
+                        <i class="bx bx-map"></i>
+                        <h3>My Address</h3>
+                        <p>{{params["city"]}} </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+                    <div class="info-box">
+                        <i class="bx bx-share-alt"></i>
+                        <h3>Social Profiles</h3>
+                        <div class="social-links">
+                            <a href="{{params[' tw_url' ]}}" target="_blank" class="twitter"><i class="icofont-twitter"></i></a>
+                            <a href="{{params[' fb_url' ]}}" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+                            <a href="{{params[' instagram_url' ]}}" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
+                            <a href="{{params[' skype' ]}}" target="_blank" class="google-plus"><i class="icofont-skype"></i></a>
+                            <a href="{{params[' linkedin_url']}}" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                    <div class="info-box">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email Me</h3>
+                        <p>{{params["email"]}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                    <div class="info-box">
+                        <i class="bx bx-phone-call"></i>
+                        <h3>Call Me</h3>
+                        <p>{{params["phone"]}}</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Touched Area for python data push/pull-->
+            <form action="/contact" method="post" role="form" class="php-email-form mt-4">
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                        <div class="validate"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message">
+                    </div>
+                    <div class="sent-message">
+                    </div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='assets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/counterup/counterup.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/venobox/venobox.min.js')}}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+ 
+</body>
+
+</html>
